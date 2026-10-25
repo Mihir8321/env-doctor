@@ -1,0 +1,20 @@
+name: Docs verification
+
+on:
+  pull_request:
+    paths:
+      - 'docs/**'
+
+jobs:
+  verify-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check docs include verification output
+        run: |
+          for f in $(git diff --name-only origin/main HEAD -- 'docs/'); do
+            if ! grep -q "env-doctor 1.2.0" "$f"; then
+              echo "❌ $f missing verification output"
+              exit 1
+            fi
+          done

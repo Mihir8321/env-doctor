@@ -1,10 +1,9 @@
 # env-doctor — Product
 
 env-doctor is a developer tool that validates project configuration and
-generates Config Snapshots — verbatim captures of the active local
-configuration (.env files, JSON configs, environment variables) that can
-be embedded in documentation so examples always show a real, working
-environment.
+generates Config Snapshots — captures of the active local configuration
+(.env files, JSON configs, environment variables) that can be embedded
+in documentation so examples always show a real, working environment.
 
 ## Tech stack
 
@@ -15,5 +14,3 @@ environment.
 
 Developer experience teams and open-source maintainers who want
 self-verifying documentation.
-
-## **8. `LICENSE`**
