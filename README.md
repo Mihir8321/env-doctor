@@ -13,4 +13,9 @@ git clone https://github.com/<your-username>/env-doctor.git
 cd env-doctor
 npm install
 
-## **8. `LICENSE`**
+## Documentation standards
+
+Docs in this repo include a config checksum (`node scripts/checksum.js`)
+so CI can verify they were built against a real environment. All docs
+changes go through PRs to main — see the docs verification workflow.
+```
